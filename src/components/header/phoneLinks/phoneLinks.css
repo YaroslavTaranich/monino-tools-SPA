@@ -1,0 +1,63 @@
+.nav-elem-phone {
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+
+
+.phone-links__tel, .phone-links__tel:hover{
+    display: inline-block;
+    font-size: 2.2rem;
+    padding: 0;
+    margin: 0;
+    color: #D1D3D4;
+    line-height: 3.4rem;
+    position: absolute;
+    left: 30rem;
+
+}
+
+.phone-links__tel span {
+    font-size: 2.2rem;
+    padding: 0;
+    margin: 0;
+    color: #f37021;
+}
+
+.phone-links__tel:hover .phone-icon{
+    color: #fff;
+    margin-right: 1rem;
+    transition: all .2s;
+
+}
+
+.phone-icon {
+    display: inline-block;
+    margin-right: 4rem;
+    font-size: 2.2rem;
+    transition: all .2s;
+
+}
+
+.phone-links__btn{ 
+    height: 3.5rem;
+    padding: 0 3rem;
+    font-size: 1.6rem;
+    margin-right: 5rem;
+    line-height: 3.4rem;
+    border-radius: 1.75rem;
+    line-height: 3rem;
+    border: 1px solid #ecb600;
+    /* border: none; */
+    z-index: 100;
+    box-sizing:inherit;
+    background-color: white;
+    transition: all .4s;
+    position: absolute;
+    left: 0;
+}
+
+.phone-links__btn:hover {
+    background-color: #ecb600;
+    transition: all .4s;
+}

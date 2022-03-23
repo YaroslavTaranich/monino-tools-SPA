@@ -1,0 +1,23 @@
+.breadcrumps-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1.4rem;
+}
+.breadcrumps-item {
+    display: inline-block;
+    transform: skew(-40deg, 0);
+    background-color:rgb(251, 244, 235);
+    border: 1px solid rgba(250, 235, 215, 1);
+    padding: 0.5rem 2rem;
+    margin-right: 1rem;
+    border-radius: 3px;
+}
+
+.breadcrumps-link {
+    display: block;
+    transform: skew(40deg, 0);
+}
+
+.breadcrumps-link:hover{
+    color: orange;
+}

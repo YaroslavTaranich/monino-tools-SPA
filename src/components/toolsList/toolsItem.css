@@ -1,0 +1,26 @@
+.toolList__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 3px solid rgba(250, 235, 215, 1);
+    margin-bottom: 4rem;
+}
+.toolList__item-title {
+    font-size: 2.4rem;
+    padding: 1rem 2rem;
+}
+.toolList__item-discription {
+    max-width: 80rem;
+    min-height: 40rem;
+    background-color: rgb(251, 244, 235);
+    padding: 3rem 7rem;
+    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%);
+}
+.toolList__item-img {
+    max-width: 40rem;
+}
+
+.toolList__price {
+    padding: 1rem 2rem;
+}
+

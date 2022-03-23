@@ -1,0 +1,35 @@
+.tool-page-title {
+    font-size: 2.6rem;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+
+/* TOOL INFO */
+
+/* .tool-info{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+} */
+.tool-info__order {
+    display: flex;
+    border-top:1px solid rgba(250, 235, 215, 1);
+    justify-content: space-around;
+}
+
+.tool-info__order-img{
+    max-width: 40rem;
+    max-height: 40rem;
+    margin: 2rem;
+}
+
+.tool-info__specification {
+    background-color: white;
+    border: 1px solid rgba(250, 235, 215, 1);
+    padding: 2rem 3rem;
+    margin: 2rem 0;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}

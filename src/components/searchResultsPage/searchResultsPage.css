@@ -1,0 +1,12 @@
+.searchResultsTitle {
+    font-size: 1.6rem;
+    display: block;
+    padding: .6rem 2rem;
+    background-color: rgba(105, 226, 105, 0.212);
+    border-radius: 3px;
+    margin: 1rem 0;
+}
+
+.searchResultsTitle-wrong {
+    background-color: rgba(255, 0, 0, 0.157)
+}

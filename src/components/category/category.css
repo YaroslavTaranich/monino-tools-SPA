@@ -1,0 +1,21 @@
+.category__section{
+    display: flex;
+    justify-content: center;
+}
+
+.category__item{
+    width: 30rem;
+    background-color: white;
+    margin: 1rem;
+    border: 1px orange solid;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.category__img{
+    width: 100%;
+}
+.category__title{
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+}
