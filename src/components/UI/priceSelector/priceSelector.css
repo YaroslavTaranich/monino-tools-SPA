@@ -1,29 +1,36 @@
 .price-selector-wrapper {
-    margin: 2rem 3rem;
-    background-color: rgba(250, 235, 215, 0.548);
-    border: 1px solid rgba(250, 235, 215, 1);
-    transform: skew(-7deg, 0);
+    margin: 0;
+    width: 40%;
+    /* background-color: rgba(250, 235, 215, 0.548);
+    border: 1px solid rgba(250, 235, 215, 1); */
+    /* transform: skew(-7deg, 0); */
     border-radius:3px;
-    box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.2);
+    /* box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.2); */
+    color: #222;
 }
 
 .price-selector {
     padding: 2rem 6rem;
-    transform: skew(7deg, 0);
+    /* transform: skew(7deg, 0); */
     text-align: center;
 }
 .price-selector__title{
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 1rem 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    letter-spacing: .2rem;
 }
 .price-selector__tarif-title{
+    
     font-size: 2rem;
-    margin: 2rem;
+    margin-top: 4rem;
+    letter-spacing: .5rem;
+    font-weight: 300;
 }
 .price-selector__tarif-btns{
     display: flex;
     justify-content: center;
+    margin: 1rem 0;
 }
 .price-selector__tarif-button{
     cursor: pointer;
@@ -31,13 +38,24 @@
     border-radius: 50%;
     height: 6rem;
     width: 6rem;
-    line-height: 5.4rem;
+    line-height: 6rem;
     background-color: rgba(250, 235, 215, 1);
     display: block;
-    margin: 0 1.5rem;
-    transition: all .4s;
+    margin: 0rem;
+    transition: all .2s;
     /* border: 1px solid rgba(250, 235, 215, 1); */
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+.price-selector__tarif-button:not(.price-selector__tarif-button:last-child){
+    margin-right: 2.2rem;
+}
+.price-selector__tarif-button:hover {
+    transform: translateY(-2px) scale(1.1);
+    outline: 3px solid #f37021;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+}
+.price-selector__tarif-button:active {
+    transform: translateY(2px);
 }
 .tarif-button--active{
     background-color: #ecb600;
@@ -46,11 +64,11 @@
 
 .price-selector__price {
     text-align: left;
-    margin-top: 1.5rem;
+    margin-top: 5rem;
 }
 .price-selector__zalog {
     text-align: right;
-    margin: 1.5rem 0;
+    margin: 3rem 0;
 }
 .price-selector__span {
     font-size: 3.2rem;

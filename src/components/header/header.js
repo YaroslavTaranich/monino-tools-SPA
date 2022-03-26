@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import logo from "./logo.svg";
 import './header.css';
 import { Link } from 'react-router-dom';
@@ -11,6 +11,8 @@ import DesktopMenu from './desktopMenu/desktopMenu';
 const Header = ({searchQuery, setSearchQuery, db, setSearchResult}) => {
 
     const[showContent, setShowContent] = useState(false);
+
+    const searchInputRef = useRef(null);
     
     useEffect(() => {
         document.addEventListener( "keydown", keyboardHandler)
@@ -33,10 +35,14 @@ const Header = ({searchQuery, setSearchQuery, db, setSearchResult}) => {
             case 's': 
             setShowContent("search") 
                 break;
+            // case 'f': 
+            // searchInputRef.current.focus() 
+            //     break;
             default: 
                 break;
         }
     }
+
 
     return(
         <header className='header'>
@@ -74,6 +80,7 @@ const Header = ({searchQuery, setSearchQuery, db, setSearchResult}) => {
                         name="search"
                         wrapperClass='nav-elem-search'
                         childClass='search'
+                        inputRef={searchInputRef}
                     >
                         <SearchInput
                             showContent={showContent}
@@ -82,6 +89,7 @@ const Header = ({searchQuery, setSearchQuery, db, setSearchResult}) => {
                             setSearchQuery={setSearchQuery}
                             db={db}
                             setSearchResult={setSearchResult}
+                            inputRef={searchInputRef}
                         />
                     </HidebleSliderButton>
 

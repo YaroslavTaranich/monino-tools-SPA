@@ -3,8 +3,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 import './phoneLinks.css'
 
-const PhoneLinks = ({setShowContent, showContent}) => {
-
+const PhoneLinks = () => {
 
     return(
         <>

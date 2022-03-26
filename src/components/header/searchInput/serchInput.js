@@ -1,17 +1,17 @@
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './searchInput.css'
 import SearchVariants from './searchVariants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClose, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-const SearchInput = ({searchQuery, setSearchQuery, db, setSearchResult, setShowContent, showContent}) => {
-    // console.log(searchQuery)
+const SearchInput = ({searchQuery, setSearchQuery, db, setSearchResult, inputRef}) => {
 
+    const findButtonRef = useRef(null);
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
-          let button = document.getElementsByClassName('search-btn-find')[0];
-          button.click()
+            findButtonRef.current.click()
         }
       }
 
@@ -27,9 +27,12 @@ const SearchInput = ({searchQuery, setSearchQuery, db, setSearchResult, setShowC
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     onKeyDown={handleKeyDown}
+                    ref={inputRef}
+                    autoComplete="off"
                 />
 
                 <Link 
+                    ref={findButtonRef}
                     className='search-btn-find'
                     to="/search-result" 
                     onClick={() => {

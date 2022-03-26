@@ -1,9 +1,11 @@
-import axios from "axios";
-
 async function getCategory() {
-    try {        
-        const response = await axios.get('https://monino-tools.ru/API/CategoryMT.json');
-        return response;
+    try {    
+        
+    let response = await fetch('https://monino-tools.ru/API/CategoryMT.json');
+    const res = await response.json();
+
+    return res
+
     } catch (error) {
         console.log(error)
     }
@@ -11,8 +13,11 @@ async function getCategory() {
 
 async function getDb() {
     try {        
-        const response = await axios.get('https://monino-tools.ru/API/toolsDB.json');
-        return response;
+
+        let response = await fetch('https://monino-tools.ru/API/toolsDB.json');
+        const res = await response.json();
+    
+        return res
     } catch (error) {
         console.log(error)
     }

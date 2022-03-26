@@ -1,7 +1,17 @@
+
 .tool-page-title {
-    font-size: 2.6rem;
-    padding: 2rem;
-    margin-top: 1rem;
+    /* font-family: "Mont Bold"; */
+    /* margin-top: 1rem; */
+    font-weight: 600;
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem 7rem 2rem 3rem;
+    background-color: rgba(250, 235, 215, 0.77);
+    /* display: inline-block; */
+    /* clip-path: polygon(0 0, 100% 0, 93% 100%, 0 100%); */
+    border-radius: 3px;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.178);
+    border: 1px solid rgba(250, 235, 215, 1);
 }
 
 
@@ -12,24 +22,40 @@
     justify-content: space-around;
     flex-wrap: wrap;
 } */
-.tool-info__order {
-    display: flex;
-    border-top:1px solid rgba(250, 235, 215, 1);
-    justify-content: space-around;
-}
+
 
 .tool-info__order-img{
     max-width: 40rem;
     max-height: 40rem;
-    margin: 2rem;
+    margin-right: 4rem;
+    border-radius: 3px;
+    outline: 1rem solid rgba(250, 235, 215, 1)
 }
 
 .tool-info__specification {
     background-color: white;
     border: 1px solid rgba(250, 235, 215, 1);
-    padding: 2rem 3rem;
-    margin: 2rem 0;
-    width: 60%;
-    display: flex;
-    justify-content: center;
+    border-radius: 3px;
+    /* padding: 1rem 2rem; */
+    margin: 0rem;
+    width: 100%;
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+    box-shadow: 1rem 2rem 5rem rgba(0, 0, 0, 0.1);
+    
+    
 }
+
+.tool-info__order {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1rem 2rem 5rem rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(107deg, rgba(250, 235, 215, 0.815) 50%, transparent 50%), url(./img/bg-order.jpg);
+    background-size: 100%;
+    border-radius: 3px;
+}
+
+

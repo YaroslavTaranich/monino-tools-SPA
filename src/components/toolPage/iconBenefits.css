@@ -1,0 +1,67 @@
+.icon-benefits {
+    /* margin: 4rem 0; */
+    background-image: linear-gradient(180deg, rgba(250, 235, 215, 0.77), rgba(250, 235, 215, 0.141)), url('./\img/icons-bg.jpg');
+    background-position: 50%;
+    background-size: 100%;
+    border-radius: 3px;
+    color: #58595B;
+    text-align: center;
+}
+
+.icon-benefits-title {
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 2rem 6rem;
+    margin-top: 5rem;
+    background-color: rgba(250, 235, 215, 0.77);
+    display: inline-block;
+    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%);
+    border-radius: 3px;
+}
+
+.icon-benefits-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon-benefits-item {
+    text-align: center;
+    margin: 7rem 0;
+    padding: 2rem 3rem;
+    box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.171);
+    background-color: rgba(250, 235, 215, 0.582);
+    width: 20%;
+    height: 33rem;
+    border-radius: 3px;
+    transition: all .3s;
+}
+
+.icon-benefits-item:hover {
+    background-color: rgba(250, 235, 215, 0.979);
+    outline: 2px solid #F37021;
+    transform: translateY(-5px);
+}
+
+.icon-benefits-item:hover .icon-benefits-item-icon{
+    color: #F37021;
+}
+
+.icon-benefits-item-icon {
+    font-size: 8rem;
+    color: #58595B;
+    margin-bottom: 0rem;
+    transition: all 1s;
+}
+
+.icon-benefits-item-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.icon-benefits-item-description {
+    font-size: 1.2rem;
+    margin-bottom: 1.4rem;
+
+}

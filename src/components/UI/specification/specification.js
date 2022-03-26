@@ -6,11 +6,13 @@ const Specification = ({tool}) => {
         const splitedElement = element.split(":");
 
         return(
-            <div className='specification__line'>
+            <div key={tool.toolUrl + "spec-div-" + i} className='specification__line'>
             <dt key={tool.toolUrl + "spec-name-" + i} className="specification__line-name">
                 {splitedElement[0]}
             </dt>
-            <dd key={tool.toolUrl + "spec-value-" + i} className="specification__line-value">{splitedElement[1]}</dd>
+            <dd key={tool.toolUrl + "spec-value-" + i} className="specification__line-value">
+                {splitedElement[1]}
+            </dd>
             </div>
         )
     })

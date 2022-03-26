@@ -37,6 +37,7 @@ function MtRoutes ({db, category, searchResult}) {
                     <ToolPage           
                     tool={tool}
                     category={category}
+                    db={db}
                     />} 
                 />
             )

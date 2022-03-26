@@ -1,3 +1,4 @@
+import IconBenefits from "../toolPage/iconBenefits";
 import Breadcrumps from "../UI/breadcrumps/breadcrumps";
 import ToolsItem from "./toolsItem";
 
@@ -23,12 +24,17 @@ const ToolsList = ({category, db, filter}) => {
     })
 
     return (
-        <section className="toolsList">
+        <>
             <Breadcrumps
-            category={currentCategory}
-            tool={false}/>
-            {list}
-        </section>
+                category={currentCategory}
+                tool={false}/>
+            <section className="toolList">
+               {list}
+            </section>
+            <IconBenefits/>
+        
+        </>
+
     )
 }
 

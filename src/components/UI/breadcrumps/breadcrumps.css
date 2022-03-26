@@ -11,13 +11,19 @@
     padding: 0.5rem 2rem;
     margin-right: 1rem;
     border-radius: 3px;
+    transition: all .5s;
 }
 
 .breadcrumps-link {
+    color: #58595B;
     display: block;
     transform: skew(40deg, 0);
+    transition: all .33s;
 }
 
 .breadcrumps-link:hover{
-    color: orange;
+    color: rgb(243, 112, 33);
+}
+.breadcrumps-item:hover {
+    border-color:rgb(243, 112, 33) ;
 }

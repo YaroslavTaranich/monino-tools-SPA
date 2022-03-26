@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Button from '../buttons/button';
+import ButtonMT from '../buttons/button';
 import './priceSelector.css';
 
 const PriceSelector = ({tool}) => {
@@ -46,21 +46,21 @@ const PriceSelector = ({tool}) => {
     return(
         <div className='price-selector-wrapper'>
             <div className='price-selector'>
-                <h4 className='price-selector__title'>Тарифы на аренду инструмента</h4>
+                <h4 className='price-selector__title'>Тарифы на аренду</h4>
                 <div className='price-selector__tarif'>
                     <p className='price-selector__tarif-title'>{rent.title}</p>
                     <div className='price-selector__tarif-btns'>{tarifButtons}</div>
                 </div>
                 <div className='price-selector__price'>
-                    <span class="price-selector__span">{rent.prices[chousenTarif].trim(' ')} </span> 
-                    <span class="rub">&#8381;</span> 
-                    <span class="price-selector__span"> / {rent.period}</span>
+                    <span className="price-selector__span">{rent.prices[chousenTarif].trim(' ')} </span> 
+                    <span className="rub">&#8381;</span> 
+                    <span className="price-selector__span"> / {rent.period}</span>
                 </div>
                 <div className='price-selector__zalog'>
                     <span className='price-selector__span'>Залог: {rent.zalog[chousenTarif].trim(' ')} </span>
-                    <span class="rub">&#8381;</span>
+                    <span className="rub">&#8381;</span>
                 </div>
-                <Button btnClass="btn-primary">Взять в арнеду</Button>
+                <ButtonMT btnClass="btn-primary">Взять в арнеду</ButtonMT>
             </div>
         </div>
 

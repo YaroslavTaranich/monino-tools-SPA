@@ -2,25 +2,13 @@ import './hidebleSliderButton.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
 
-const HidebleSliderButton = ({setShowContent, showContent, name, wrapperClass, childClass, icon, ...props}) => {
+const HidebleSliderButton = ({setShowContent, showContent, name, wrapperClass, childClass, icon, inputRef, ...props}) => {
 
-    const button  = name === "search"
-            ?   <button 
-                    className='nav-btn-show nav-btn-show--search'
-                    onClick={() => {showContent === "search" ? setShowContent(false) : setShowContent("search")}}
-                >
-                    <label htmlFor='search-input'>
-                        <FontAwesomeIcon icon={showContent === "search" ? faClose : icon} />
-                    </label>
-                </button>
-
-            :   <button 
-                    className={'nav-btn-show nav-btn-show--'+name}
-                    onClick={() => {showContent === name ? setShowContent("") : setShowContent(name)}}
-                    >
-                        <FontAwesomeIcon icon={showContent === name ? faClose : icon} />
-                </button>
-
+    const buttonHandler = () => {
+        showContent === name ? setShowContent("") : setShowContent(name)}
+        if(showContent === "search") {
+            (setTimeout(() => {inputRef.current.focus()}, 555))
+        }                           
 
     return(
         <div 
@@ -35,7 +23,12 @@ const HidebleSliderButton = ({setShowContent, showContent, name, wrapperClass, c
                 {props.children}
             
             </div>
-            {button}
+            <button 
+                className={'nav-btn-show'}
+                onClick={() => buttonHandler()}
+                >
+                <FontAwesomeIcon icon={showContent === name ? faClose : icon} />
+            </button>
 
         </div>
     )

@@ -7,22 +7,22 @@ import './App.css'
 import Header from "../header/header";
 import MtRoutes from "../routes/MtRoutes";
 
-import { getCategory, getDb } from "../../services/API";
+// import { getCategory, getDb } from "../../services/API";
 
 const App = () => {
 
     const [searchQuery, setSearchQuery] = useState("");
     const [searchResult, setSearchResult] = useState("");
 
-    useEffect(() => {
-        getData()
-    }, [])
+    // useEffect(() => {
+    //     getData()
+    // }, [])
 
-    async function getData() {
-        const db = await getDb();
-        const category = await getCategory()
-        console.log(db, category);
-    }
+    // async function getData() {
+    //     const db = await getDb();
+    //     const category = await getCategory()
+    //     console.log(db, category);
+    // }
 
 
     return (
