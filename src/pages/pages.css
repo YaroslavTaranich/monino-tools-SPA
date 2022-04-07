@@ -1,0 +1,196 @@
+.delivery-section,
+.contacts-section
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    width: 100%;
+    min-height: 100vh;
+    box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.281);
+    text-align: center;
+    border-radius:3px;
+}
+.delivery-section{
+    background-image: url('./img/delivery.jpg');
+}
+
+.pages-header{
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 2rem 10rem;
+    margin-top: 5rem;
+    background-color: rgba(250, 235, 215, 0.77);
+    display: inline-block;
+    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%);
+    border-radius: 3px;
+    display: inline-block;
+
+}
+.delivery-description{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 70vh;
+    margin-top: 3rem;
+}
+.delivery-description-block {
+    width: 55%;
+    padding: 0rem;
+    margin-right: 2rem;
+    text-align: left;
+    background-color: rgba(250, 235, 215, 0.77);
+    border-radius:3px;
+    margin-bottom: 2rem;
+}
+.delivery-description-block p {
+    font-size: 2rem;
+    margin-bottom: 0rem;
+    padding: 2rem;
+    padding-bottom: 0;
+}
+.delivery-description-block ul {
+    margin: 2rem 0;
+}
+.delivery-description-block ul li {
+    font-size: 2rem;
+    margin-left: 3rem;
+}
+@media (max-width:900px) {
+    .delivery-description-block{
+        width: 70%;
+    }
+}
+@media (max-width:600px) {
+    .delivery-description{
+        justify-content: center;
+        margin: 3rem 0;
+    }
+    .delivery-description-block{
+        width: 90%;
+        margin: 2rem 0;
+    }
+}
+
+
+/* Условия доставки */
+.rent-terms{
+    margin: 2rem;
+    margin-top: 0;
+}
+
+.rent-terms-ul li,
+.rent-terms-ol li
+{
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: .5rem;
+}
+.rent-terms-ul li::before{
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    top: .5rem;
+    left: 0;
+    border-radius:50%;
+    background-color:#ecb600;
+    position: absolute;
+}
+.rent-terms-ol{
+    counter-reset: num;
+}
+.rent-terms-ol li::before {
+    content: counter(num) ".";   
+    counter-increment: num; 
+    top: 0rem;
+    left: 0;
+    color:#ecb600;
+    position: absolute;
+    font-weight: 700;
+}
+
+.rent-terms-title{
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+/* Контакты */
+
+.contacts-section{
+    background-image: url('./img/contacts-bg.jpg');
+    padding-bottom: 4rem;
+}
+.contacts-block{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(250, 235, 215, 0.77);
+    width: 90%;
+    margin: 4rem auto;
+    border-radius:4px;
+    overflow: hidden;
+}
+.contacts-info{
+    width: 50%;
+    padding: 2rem;
+    position: relative;
+    padding-bottom: 10rem;
+}
+.contacts-info h2{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.contacts-info p{
+    text-align: left;
+    margin: 1rem;
+}
+.contacts-info p span {
+    letter-spacing: .3rem;
+    font-size: 2rem;
+    font-weight: 400;
+    display: block;
+    padding: 1rem;
+}
+.contacts-link{
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+.contacts-link:hover{
+    color:#ecb600
+}
+
+.contacts-social-links{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background-color:#58595B;
+    border-radius:3px;
+}
+
+.contacts-map {
+    width: 50%;
+    margin: 0;
+}
+iframe{
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width:600px) {
+    .contacts-block{
+        width: 90%;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .contacts-info {
+        width: 100%;
+        position: unset;
+        padding-bottom: 2rem ;
+    }
+    .contacts-map {
+        width: 100%;
+        height: 35rem;
+        margin-bottom: 6rem;
+    }
+}

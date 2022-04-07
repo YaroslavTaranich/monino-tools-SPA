@@ -11,14 +11,14 @@
 }
 .toolList__item-title {
     font-size: 2.4rem;
-    padding: 1rem 2rem;
+    padding: 1rem 0rem;
 }
 .toolList__item-discription {
     max-width: 70rem;
     min-height: 40rem;
     /* background-color: rgb(251, 244, 235); */
-    padding: 3rem 7rem;
-    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%);
+    margin: 3rem 3rem 3rem 10rem;
+    /* clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%); */
     background-color: #FDF7F0;
 }
 .toolList__item-img {
@@ -31,4 +31,61 @@
 }
 .toolList__price-span {
     font-size: 2.6rem;
+}
+
+@media (max-width: 900px) {
+    .toolList{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border-top: 3px solid rgba(250, 235, 215, 1);
+    }
+    .toolList__item{
+        margin: 0;
+        width: 32%;
+        justify-content: center;
+        margin: .5rem 0;
+        flex-wrap: wrap;
+        background-image: none;
+        border: 2px solid rgba(250, 235, 215, 1);
+    }
+    .toolList__item-img{
+        max-width: 100%;
+        margin: 0;
+        
+    }
+    .toolList__item-title {
+        margin: 0;
+        font-size: 2rem;
+        padding: 2rem 0rem;
+        text-align: center;
+    }
+    .toolList__item-discription {
+        margin: 0;
+        min-height: auto;
+        padding: 1rem 2rem;
+        border-top: 2px solid rgba(250, 235, 215, 1);
+        width: 100%;
+    }
+    .toolList__item-discription .specification-wrapper{
+        display: none;
+    }
+    .toolList__price{
+        text-align: center;
+    }
+}
+@media (max-width: 600px) {
+    .toolList__item{
+        margin-top: 1rem;
+        width: 48%;
+
+    }
+}
+
+@media (max-width: 420px) {
+    .toolList__item{
+        margin-top: 1rem;
+        width: 95%;
+
+    }
 }

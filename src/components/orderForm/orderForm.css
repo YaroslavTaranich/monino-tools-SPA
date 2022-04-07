@@ -1,0 +1,198 @@
+/* FORM */
+.order-modal__form{
+    width: 60%;
+    padding: 0 3rem;
+    background-color:inherit;
+    text-align: center;
+}
+
+.form-group--date{
+    margin-top: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center
+}
+
+.form-label--date{
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 2rem;
+    padding: .8rem 1rem;
+    transition: all .3s;
+    color: #999;
+    letter-spacing: .15rem; 
+    cursor: pointer;
+}
+
+
+.form-input--date{
+    width: 40%;
+    font-size: 2rem;
+    padding: 0.8rem 1rem;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all .4s;
+    outline: none;
+    letter-spacing: .15rem;
+    box-shadow: 0rem 1rem 1rem rgb(0 0 0 / 12%);
+}
+::-webkit-calendar-picker-indicator  {
+    opacity: 0.5;
+}
+
+.form-input--date:focus ~ .calendar-icon{
+    color: #F37021 ;
+}
+.form-input--date:focus ~ .form-label--date, 
+.form-input:focus ~ .form-label,
+input,
+textarea
+{
+    color: #58595B;
+}
+
+.form-group--radio{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    margin: 3rem 0;
+}
+.form-label--radio{
+    position: relative;
+    cursor: pointer;
+}
+.form-label--radio span{
+    font-size: 2rem;
+}
+.form-label--radio-span::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    outline: 2px solid #ecb600;
+    transform: translate(-3.5rem, -.1rem);
+    
+    
+}
+.form-input--radio {
+    display: none;
+}
+.form-input--radio:checked ~ .form-label--radio-span::before {
+    background-color:#ecb600;
+    background-image: url('./svg/checked.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 70% 70%;
+    
+}
+
+.delivery-notice {
+    padding: 1rem 2rem;
+    color:#58595B;
+    letter-spacing: .15rem;
+    font-weight: 300;
+}
+
+.form__price-block{
+    background-color:inherit;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color:#58595B;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+.form__price-block::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 3.3rem;
+    height: 1px;
+    background: url(./svg/dotted-grey.svg) 0 0 repeat-x;
+}
+
+.form__price-block--title{
+    background-color: inherit;
+    font-size: 2rem;
+    padding: 1rem;
+    z-index: 2;
+}
+.form__price-block--price {
+    font-size: 3rem;
+    z-index: 2;
+    background-color: inherit;
+}
+
+
+
+
+
+
+.form--submit{
+    margin: 2.5rem auto 1rem auto;
+}
+
+
+.show-input {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    height: auto;
+    max-height: 25rem;
+    transition: all .4s;
+}
+
+.hide-input {
+    opacity: 0;
+    transform: translateY(-3rem);
+    visibility: hidden;
+    height: auto;
+    max-height: 0rem;
+    transition: all .4s;
+}
+
+/* CARD  */
+.order-modal__tool-card {
+    width: 35%;
+    max-height: 45rem;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid #ecb600;
+    background-color: white;
+    box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.123);
+}
+.order-modal__tool-card-title{
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+}
+.order-modal__img{
+    max-width: 100%;
+}
+.form__mobile-title{
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .form__mobile-title{
+        display: inline-block;
+        font-size: 2.2rem;
+        font-weight: 600;
+        color:#58595B;
+        /* padding: 2rem; */
+    }
+
+    .order-modal__form{
+        width: 95%;
+        padding: 0;
+    }
+    .order-modal__tool-card{
+        display: none;
+    }
+}

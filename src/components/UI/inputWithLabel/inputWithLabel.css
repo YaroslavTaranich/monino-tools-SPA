@@ -1,0 +1,51 @@
+.form-group{
+    width: 100%;
+    position: relative;
+    margin-top: 4rem;
+}
+.form-label {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    opacity: 1;
+    transform: translateY(-4rem);
+    font-size: 2rem;
+    padding: .8rem 1rem;
+    transition: all .3s;
+    color: #999;
+    letter-spacing: .15rem;
+    cursor: pointer;
+}
+.form-input::placeholder {
+    color: #999;
+    letter-spacing: .15rem;
+}
+
+.form-input:placeholder-shown + .form-label {
+    opacity: 0;
+    transform: translateY(0rem);
+}
+
+.form-input {
+    width: 100%;
+    font-size: 2rem;
+    padding: .8rem 1rem;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all .4s;
+    outline: none;
+    letter-spacing: .15rem;
+    box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.123);
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill
+{
+    background-color: white ;
+    transition: background-color 5000s ease-in-out 1110s;
+}
+
+.form-input:focus{
+    border: 1px solid #ecb600;
+    outline: 1px solid #ecb600;
+    box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.223);
+}

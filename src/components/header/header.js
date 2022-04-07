@@ -1,18 +1,22 @@
 import React, {useEffect, useRef, useState} from 'react';
-import logo from "./logo.svg";
 import './header.css';
-import { Link } from 'react-router-dom';
 import SearchInput from '../header/searchInput/serchInput';
 import PhoneLinks from './phoneLinks/phoneLinks';
 import HidebleSliderButton from '../UI/hidebleSliderButton/hidebleSliderButton';
 import { faPhone, faSearch, faBars } from '@fortawesome/free-solid-svg-icons'
-import DesktopMenu from './desktopMenu/desktopMenu';
+import DesktopMenu from './menu/desktopMenu/desktopMenu';
+import ModalWindow from '../modalWindow/modalWindow';
+import MobileMenu from './menu/mobileMenu/mobileMenu';
+import MobilePhoneLink from './phoneLinks/mobilePhoneLink';
+import LogoHeader from './logo';
 
 const Header = ({searchQuery, setSearchQuery, db, setSearchResult}) => {
 
     const[showContent, setShowContent] = useState(false);
-
-    const searchInputRef = useRef(null);
+    const [showModal, setShowModal] = useState(false);
+    const [modalContent, setModalContent] = useState(false);
+    const [modalTitle, setModalTitle] = useState("");
+    const searchInputRef = useRef(false);
     
     useEffect(() => {
         document.addEventListener( "keydown", keyboardHandler)
@@ -22,24 +26,8 @@ const Header = ({searchQuery, setSearchQuery, db, setSearchResult}) => {
     }, [])
 
     const keyboardHandler = (event) => {
-        switch (event.key) {
-            case 'Escape': 
+        if (event.key === 'Escape') { 
             setShowContent(false) 
-                break;
-            case 't': 
-            setShowContent("phone") 
-                break;
-            case 'm': 
-            setShowContent("menu") 
-                break;
-            case 's': 
-            setShowContent("search") 
-                break;
-            // case 'f': 
-            // searchInputRef.current.focus() 
-            //     break;
-            default: 
-                break;
         }
     }
 
@@ -47,9 +35,9 @@ const Header = ({searchQuery, setSearchQuery, db, setSearchResult}) => {
     return(
         <header className='header'>
             <div className='container header__blocks'>
-
-                <Link to="/"><img src={logo} alt='monino-tools-logo' className='header__logo'/></Link>
-
+                {/* лого */}
+                <LogoHeader/>
+                {/* кнопки-слайдеры для элементов навигации  */}
                 <nav className='header__nav'>
                     <HidebleSliderButton
                         showContent={showContent}
@@ -59,7 +47,12 @@ const Header = ({searchQuery, setSearchQuery, db, setSearchResult}) => {
                         wrapperClass='nav-elem-menu'
                         childClass='desktop-menu'
                     >
-                     <DesktopMenu/>
+                        {/* меню для десктопов */}
+                     <DesktopMenu 
+                        setShowModal={setShowModal} 
+                        setModalContent={setModalContent}
+                        setModalTitle={setModalTitle}
+                     />
                     </HidebleSliderButton>
 
                     <HidebleSliderButton
@@ -70,7 +63,12 @@ const Header = ({searchQuery, setSearchQuery, db, setSearchResult}) => {
                         wrapperClass='nav-elem-phone'
                         childClass='phone-links'
                     >
-                     <PhoneLinks/>
+                        {/* сслыка на телефон и кнопка перезвонить */}
+                     <PhoneLinks 
+                        setShowModal={setShowModal} 
+                        setModalContent={setModalContent}
+                        setModalTitle={setModalTitle}
+                     />
                     </HidebleSliderButton>
 
                     <HidebleSliderButton
@@ -82,6 +80,7 @@ const Header = ({searchQuery, setSearchQuery, db, setSearchResult}) => {
                         childClass='search'
                         inputRef={searchInputRef}
                     >
+                        {/* поиск для десктопов */}
                         <SearchInput
                             showContent={showContent}
                             setShowContent={setShowContent}
@@ -94,7 +93,35 @@ const Header = ({searchQuery, setSearchQuery, db, setSearchResult}) => {
                     </HidebleSliderButton>
 
                 </nav>
+
+                <MobilePhoneLink/>
+                <MobileMenu 
+                    setShowModal={setShowModal} 
+                    setModalContent={setModalContent}
+                    setModalTitle={setModalTitle}
+                />
             </div>
+            {/* блоки только для моб устройств меньше 420px */}
+            <div className='container header__blocks header__blocks-mobile'>
+                {/* поиск для мобильных устройств */}
+                <SearchInput showContent={showContent}
+                            setShowContent={setShowContent}
+                            searchQuery={searchQuery}
+                            setSearchQuery={setSearchQuery}
+                            db={db}
+                            setSearchResult={setSearchResult}
+                        />
+            </div>
+
+            {/* модальное окно получает контент из стейта */}
+            {
+                showModal && <ModalWindow 
+                                content={modalContent} 
+                                setShowModal={setShowModal}
+                                title={modalTitle}
+                              />
+                            
+            }
         </header>
         
     )

@@ -2,7 +2,6 @@
     background-color: #f9f6f3;
     border-radius: 3px;
     padding: 0;
-    margin-bottom: 40rem;
 }
 
 .another-from-category-title {
@@ -10,7 +9,7 @@
     font-weight: 600;
     text-align: center;
     padding: 2rem 0;
-    box-shadow: 0rem 1rem .5rem rgba(0, 0, 0, 0.096)
+    box-shadow: 0rem 1rem .5rem rgba(0, 0, 0, 0.096);
 }
 .another-from-category-footer{
     box-shadow: 0rem -1rem .5rem rgba(0, 0, 0, 0.096);
@@ -54,4 +53,20 @@
     text-align: center;
     width: 80%;
     margin: 2rem auto 0rem auto;
+}
+
+@media (max-width:600px) {
+    .another-from-category__list{
+        flex-wrap: wrap;
+        margin: 3rem 0;
+    }
+}
+@media (max-width:400px) {
+    .another-from-category__list-item{
+        max-width: 90%;
+        margin: .5rem;
+    }
+    .another-from-category__list-item-title{
+        font-size: 2rem;
+    }
 }

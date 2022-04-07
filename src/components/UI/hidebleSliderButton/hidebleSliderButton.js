@@ -6,7 +6,7 @@ const HidebleSliderButton = ({setShowContent, showContent, name, wrapperClass, c
 
     const buttonHandler = () => {
         showContent === name ? setShowContent("") : setShowContent(name)}
-        if(showContent === "search") {
+        if(showContent === "search" && inputRef) {
             (setTimeout(() => {inputRef.current.focus()}, 555))
         }                           
 

@@ -7,14 +7,17 @@ const CategoryItem = ({item}) => {
     // const item = category.filter( (item) => item.id === id)[0]
 
     return (
-        <Link to={item.url}>
+        
             <div 
             className="category__item"
             >
-                <img src={item.imgSrc} alt={item.name} className="category__img"/>
-                <h4 className="category__title">{item.name}</h4>
+                <Link to={item.url}>
+                    <img src={item.imgSrc} alt={item.name} className="category__img"/>
+                    <h4 className="category__title">{item.name}</h4>
+                </Link>
+
             </div>
-        </Link>
+        
 
     )
 

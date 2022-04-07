@@ -65,3 +65,31 @@
     margin-bottom: 1.4rem;
 
 }
+
+@media (max-width:600px) {
+    .icon-benefits {
+        background-size:cover;
+    }
+    .icon-benefits-items {
+        flex-wrap: wrap;
+        padding: 3rem 1rem;
+    }
+    .icon-benefits-item{
+        width: 43%;
+        margin: 2rem 0;
+    }
+    .icon-benefits-item-description{
+        font-size: 1.6rem;
+    }
+}
+@media (max-width:600px) {
+
+    .icon-benefits-item{
+        width: 90%;
+        margin: 2rem 0;
+    }
+    .icon-benefits-item-description{
+        font-size: 1.8rem;
+        padding-top: 2rem;
+    }
+}

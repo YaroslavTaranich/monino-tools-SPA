@@ -59,3 +59,35 @@
 }
 
 
+
+@media (max-width:600px) {
+    .tool-info__order {
+        flex-wrap: wrap;
+        align-items:center;
+        justify-content: center;
+        background-image: linear-gradient(163deg, rgba(250, 235, 215, 0.815) 50%, transparent 50%), url(./img/bg-order.jpg);
+        background-size: cover;
+    }
+    .tool-info__order-img{
+        margin: 2rem auto;
+        max-width: 100%;
+        max-height: 60rem;
+    }
+    .tool-description{
+        padding: 1rem;
+    }
+}
+/* @media (max-width:400px) {
+    .tool-info__order {
+        flex-wrap: wrap;
+        align-items:center;
+        justify-content: center;
+        background-image: linear-gradient(163deg, rgba(250, 235, 215, 0.815) 50%, transparent 50%), url(./img/bg-order.jpg);
+        background-size: cover;
+    }
+    .tool-info__order-img{
+        margin: 2rem auto;
+        max-width: 100%;
+        max-height: 60rem;
+    }
+} */

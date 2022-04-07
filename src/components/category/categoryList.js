@@ -1,9 +1,10 @@
 // import react from "react";
+import AnotherTools from '../anotherTools/anotherTools';
 import IconBenefits from '../toolPage/iconBenefits';
 import './category.css';
 import CategoryItem from "./categoryItem";
 
-const CategoryList = ({category}) => {
+const CategoryList = ({category, db}) => {
 
     let list = category.map((element) => {
        return (
@@ -22,6 +23,7 @@ const CategoryList = ({category}) => {
             </div>
             
             <IconBenefits/>
+            <AnotherTools db={db} show="popular" tool={false}/>
         </section>
         
     )

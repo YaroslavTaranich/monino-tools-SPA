@@ -21,14 +21,14 @@ const SearchResultsPage = ({db, category, searchResult}) => {
         return(
             <>
             <div className="searchResultsTitle searchResultsTitle-wrong">Нет результатов по запросу "{searchResult}"</div>
-            <CategoryList category={category}/>
+            <CategoryList category={category} db={db}/>
             </>
         )
     }  if (searchResult.trim(" ") === "") {
         return(
             <>
             <div className="searchResultsTitle searchResultsTitle-wrong">Введите поисковый запрос или выберите инструмент из категории!</div>
-            <CategoryList category={category}/>
+            <CategoryList category={category} db={db}/>
             </>
         )
     }   

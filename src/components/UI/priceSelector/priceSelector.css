@@ -10,6 +10,7 @@
 }
 
 .price-selector {
+    color: #333;
     padding: 2rem 6rem;
     /* transform: skew(7deg, 0); */
     text-align: center;
@@ -21,7 +22,7 @@
     letter-spacing: .2rem;
 }
 .price-selector__tarif-title{
-    
+    color: #58595B;
     font-size: 2rem;
     margin-top: 4rem;
     letter-spacing: .5rem;
@@ -73,3 +74,51 @@
 .price-selector__span {
     font-size: 3.2rem;
 }   
+
+@media (max-width:600px) {
+
+    .price-selector-wrapper{
+        width: 100%;
+    }
+    .price-selector{
+        padding: 1rem;
+    }
+    .price-selector__title{
+        font-size: 3rem;
+
+    }
+    .price-selector__tarif-title{
+        font-size: 2.5rem;
+        letter-spacing: .8rem;
+    }
+    .price-selector__tarif-btns{
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+    .price-selector__tarif-button{
+        font-size: 4rem;
+        border-radius: 50%;
+        height: 8rem;
+        width: 8rem;
+        line-height: 8rem;
+
+    }
+    .price-selector__tarif-button:not(.price-selector__tarif-button:last-child){
+        margin-right: 2 rem;
+    }
+  
+    .price-selector__price {
+        text-align: center;
+        margin-top: 5rem;
+        /* font-size: 5rem; */
+    }
+    .price-selector__zalog {
+        text-align: center;
+        margin: 3rem 0;
+    }
+    .price-selector__span {
+        font-size: 4rem;
+    }
+    
+}

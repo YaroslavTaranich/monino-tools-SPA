@@ -12,7 +12,7 @@
     position: relative;
 }
 .header__logo {
-    width: 500px;
+    width: 55rem;
 }
 
 /* .header__menu-btn {
@@ -37,11 +37,11 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: red;
+
     z-index: 9999;
 }
 
-.nav-elem-wrapper{
+/* .nav-elem-wrapper{
     width: 65rem;
     height: 3.5rem;
     background-color:#58595B;
@@ -52,7 +52,7 @@
     transition: all .2s;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 
-}
+} */
 
 .nav-elem-wrapper--position {
     position: absolute;
@@ -61,34 +61,10 @@
     transform: translate(0, -50%);
 }
 
-.nav-btn-show {
-    border-radius: 50%;
-    background-color:#ecb600;
-    width: 3.5rem;
-    height: 3.5rem;
-    font-size: 2rem;
-    text-align: center;
-    line-height: 3.6rem;
-    color: #58595B;
-    z-index: 110;
-    transition: all .3s;
-}
-.nav-btn-show:hover {
-    background-color: #58595B;
-    cursor: pointer;
-    color: #F37021;
-    border: solid 1px #F37021 ;
-    transition: all .4s;
-}
-
 .nav-btn-show--phone {
     position: absolute;
     right: 0;
 }
-
-/* .nav-collapse {
-
-} */
 
 .nav-collapse--phone {
     position: absolute;
@@ -107,3 +83,60 @@
 .z-1000 {
     z-index: 1000;
 }
+.header__blocks-mobile{
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .header__blocks{
+        padding: 1rem 2rem;
+      }
+
+}
+
+
+@media (max-width: 600px) {
+    .header__logo{
+        margin-top: 2rem;
+        max-width: 100%;
+    }
+    .header__blocks {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .header__nav{
+        width: 100%;
+        height: 5rem;
+    }
+  }
+
+  @media (max-width: 570px) {
+    .header{
+
+        /* position: sticky; */
+        top: 0rem;
+        z-index: 9999;
+    }
+
+    .header__nav{
+        display: none;
+
+    }
+    .header__blocks{
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        height: 7rem; 
+    }
+    .header__logo{
+        margin-top: 0.3rem;
+        max-width: 85%;
+    }
+    .header__blocks-mobile{
+        display: block;
+    }
+  }

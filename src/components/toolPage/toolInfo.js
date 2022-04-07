@@ -2,6 +2,7 @@ import './toolPage.css';
 import PriceSelector from '../UI/priceSelector/priceSelector';
 import TabsAbout from './tabsAbout';
 
+
 const ToolInfo = ({tool}) => {
 
     return (

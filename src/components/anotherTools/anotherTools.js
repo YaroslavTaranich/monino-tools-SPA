@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './anotherFromCategory.css'
+import './anotherTools.css'
 
-function AnotherFromCategory({tool, db, category}) {
+function AnotherTools({tool, db, show}) {
 
     const [anotherTools, setAnotherTools] = useState(null);
+    const [header, setHeader] = useState('');
 
     useEffect(() => {
         setAnotherTools(GetAnotherTools())
@@ -12,8 +13,24 @@ function AnotherFromCategory({tool, db, category}) {
 
 
     const GetAnotherTools = () => {
-        const another = db.filter(item => item.categoryName === tool.categoryName && item.toolName !== tool.toolName)
-                        .map(tool => {
+        console.log("get another tools")
+
+        const categoryArray = db.filter(item => item.categoryName === tool.categoryName);
+        let items;
+        // console.log(categoryArray)
+
+        if (categoryArray.length <= 2 || show === "popular") {
+            items = db.filter(item => item.popular === "true");
+            setHeader("Популярный инструмент")
+        } else {
+            items = categoryArray
+            setHeader(`Другой инструмент из категории "${tool.categoryName}"`)
+        }
+
+        if (tool) {
+            items = items.filter(item => item.toolName !== tool.toolName)
+        }
+        const another = items.map(tool => {
                             return(
                                 <div className='another-from-category__list-item' key={tool.toolUrl + "AnotherFromCategory"}>
                                     <Link to={tool.toolUrl} >
@@ -35,7 +52,7 @@ function AnotherFromCategory({tool, db, category}) {
     return ( 
         <div className="another-from-category">
             <h2 className="another-from-category-title">
-                Другой инструмент из категории "{tool.categoryName}"
+                {header}
             </h2>
             <div className='another-from-category__list'>
                 {anotherTools}           
@@ -46,4 +63,4 @@ function AnotherFromCategory({tool, db, category}) {
      );
 }
 
-export default AnotherFromCategory;
+export default AnotherTools;

@@ -2,7 +2,8 @@ import './toolPage.css';
 import Breadcrumps from '../UI/breadcrumps/breadcrumps';
 import ToolInfo from './toolInfo';
 import IconBenefits from './iconBenefits';
-import AnotherFromCategory from '../anotherFromCategory/anotherFromCategory';
+import AnotherTools from '../anotherTools/anotherTools';
+
 
 
 const ToolPage = ({tool, category, db}) => {
@@ -10,6 +11,7 @@ const ToolPage = ({tool, category, db}) => {
     const toolCategory = category.find(item => item.name === tool.categoryName)
 
     return(
+        <>
         <section className='tool-page'>
             <Breadcrumps
             tool={false}
@@ -19,8 +21,14 @@ const ToolPage = ({tool, category, db}) => {
             </h1>
             <ToolInfo tool={tool}/>
             <IconBenefits/>
-            <AnotherFromCategory tool={tool} db={db} category={category}/>
+            <AnotherTools tool={tool} db={db} category={category}/>
+
         </section>
+        
+
+
+        </>
+
     )
 }
 

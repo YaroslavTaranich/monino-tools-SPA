@@ -22,11 +22,8 @@ ul, ol, li, p, h1, h2, h3, h4, h5, a, span, div {
   box-sizing: border-box;
   list-style: none;
   font-size: 1.6rem;
-}
-
-a, a:hover {
-  text-decoration: none;
   color: #333;
+  text-decoration: none;
 }
 
 
@@ -51,4 +48,22 @@ a, a:hover {
 
 .d-inline-block {
   display: inline-block;
+}
+
+@media (max-width: 1200px) {
+  .container{
+    width: 100%;
+  }
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 900px) {
+  .container{
+    width: 100%;
+  }
+  html {
+    font-size: 50%;
+  }
 }

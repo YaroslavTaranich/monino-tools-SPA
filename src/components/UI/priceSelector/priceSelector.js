@@ -1,11 +1,15 @@
 import { useState } from 'react';
-import ButtonMT from '../buttons/button';
+import ModalWindow from '../../modalWindow/modalWindow';
+import OrderForm from '../../orderForm/orderForm';
+import ToolCardForm from '../../orderForm/toolCardForm';
+
 import './priceSelector.css';
 
 const PriceSelector = ({tool}) => {
 
 
     const [chousenTarif, setChousenTarif] = useState(0);
+    const [showModal, setShowModal] = useState(false);
 
     let rent = {
         prices: tool.prices.split(","),
@@ -41,7 +45,7 @@ const PriceSelector = ({tool}) => {
         )
     })
 
-
+    
 
     return(
         <div className='price-selector-wrapper'>
@@ -60,8 +64,25 @@ const PriceSelector = ({tool}) => {
                     <span className='price-selector__span'>Залог: {rent.zalog[chousenTarif].trim(' ')} </span>
                     <span className="rub">&#8381;</span>
                 </div>
-                <ButtonMT btnClass="btn-primary">Взять в арнеду</ButtonMT>
+                <button 
+                className="btn btn-primary"
+                onClick={() => setShowModal(true)}
+                >Взять в арнеду</button>
             </div>
+            {showModal}
+            {console.log(showModal)}
+            {showModal 
+            && <ModalWindow 
+                title={"Взять инструмент в аренду"}
+                content={<>
+                            <OrderForm tool={tool}/>
+                            <ToolCardForm tool={tool}/>
+                         </>}
+                setShowModal={setShowModal}   
+                />
+            
+        }
+            
         </div>
 
 

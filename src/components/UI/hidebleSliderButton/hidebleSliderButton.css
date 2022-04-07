@@ -88,6 +88,7 @@
 
 .hide-wrapper {
     width: 3.5rem;
+    height: 3.5rem;
     transition: all .2s;
 }
 .show-wrapper {
@@ -95,4 +96,69 @@
     width: 65rem;
     height: 3.5rem;
     transition: all .3s ease-in;
+}
+
+@media (max-width: 1200px) {
+    .nav-elem-wrapper{
+
+        border-radius: 2.5rem;
+    
+    }
+    .nav-btn-show {
+        
+        width: 5rem;
+        height: 5rem;
+        font-size: 3rem;
+        text-align: center;
+        line-height: 5.3rem;
+
+    }
+
+    .hide-wrapper {
+        width: 5rem;
+        height: 5rem;
+    }
+    .show-wrapper {
+        width: 75rem;
+        height: 5rem;
+    }
+}
+@media (max-width: 900px){
+    .show-wrapper { 
+        width: 70rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+   
+    .show-wrapper {
+        max-width: 100%;
+        width: 100%;
+        height: 5rem;
+
+    }
+    .nav-collapse--phone {
+        top: 50%;
+        transform: translate(50%, -50%);
+        right: 35%;
+    }
+    
+    .nav-collapse--search {
+        position: absolute;
+        top: 50%;
+        transform: translate(50%, -50%);
+        right: 50%;
+    }
+    
+    .nav-collapse--menu {
+        position: absolute;
+        top: 50%;
+        transform: translate(50%, -50%);
+        right: 65%;
+    }
+    .nav-elem-wrapper--position{
+        top: 50%;
+        transform: translate(0, -50%);
+    }
 }

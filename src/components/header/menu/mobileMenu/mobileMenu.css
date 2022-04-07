@@ -1,0 +1,54 @@
+.mobile-menu{
+    display: none;
+}
+@media (max-width: 570px) {
+    .mobile-menu{
+        display: block;
+    }
+}
+
+.mobile-menu-icon{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    padding: .7rem;
+    border: 1px solid #F37021;
+    color:#F37021;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+.mobile-menu-list{
+    background-color:#58595bd7;
+    position: absolute;
+    top: 7rem;
+    left: 0rem;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+}
+.mobile-menu-item {
+    font-size: 3rem;
+    padding: .7rem;
+    color: #eee; 
+    letter-spacing: .2rem;  
+}
+.mobile-menu-item {
+    border-bottom: 1px solid rgba(250, 235, 215, 1);
+}
+
+
+
+
+.mobile-menu--show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .4s;
+
+}
+.mobile-menu--hide {
+    opacity: 0;
+    transform: translateX(-30rem);
+    transition: all .4s;
+    visibility: hidden;
+
+}

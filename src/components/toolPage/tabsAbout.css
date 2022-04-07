@@ -71,3 +71,30 @@
     font-size: 1.8rem;
     padding: 2rem 7rem;
 }
+
+@media (max-width:900px) {
+    .tabs-content{
+        padding: 1rem;
+    }
+    .tool-description{
+        padding: 2rem 3rem;
+    }
+}
+
+@media (max-width:600px) {
+
+    .tool-description{
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .tabs-button{
+        width: 50%;
+        padding: 1rem 1rem 1rem 5rem;
+        text-align: center;
+    }
+    .tab-icon{
+        left: 1rem
+    }
+}

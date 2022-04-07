@@ -1,7 +1,8 @@
 async function getCategory() {
     try {    
         
-    let response = await fetch('https://monino-tools.ru/API/CategoryMT.json');
+    let response = await fetch('http://localhost:3000//CategoryMT.json');
+    // let response = await fetch('https://dogecoin-forum.ru/CategoryMT.json');
     const res = await response.json();
 
     return res
@@ -14,7 +15,8 @@ async function getCategory() {
 async function getDb() {
     try {        
 
-        let response = await fetch('https://monino-tools.ru/API/toolsDB.json');
+        let response = await fetch('http://localhost:3000//toolsDB.json');
+        // let response = await fetch('https://dogecoin-forum.ru/toolsDB.json');
         const res = await response.json();
     
         return res
