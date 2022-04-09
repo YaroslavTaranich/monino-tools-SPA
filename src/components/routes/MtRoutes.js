@@ -9,8 +9,21 @@ import ToolPage from "../toolPage/toolPage";
 import DeliveryPage from "../../pages/deliveryPage";
 import ContactsPage from "../../pages/contacts";
 import AnotherTools from "../anotherTools/anotherTools";
+import { useLocation } from "react-router";
+import { useEffect, useState } from "react";
+
 
 function MtRoutes ({db, category, searchResult}) {
+
+
+    const location = useLocation();
+    const [displayLocation, setDisplayLocation] = useState(location);
+    const [transitionStage, setTransistionStage] = useState("fadeIn");
+
+    useEffect(() => {
+        if (location !== displayLocation) setTransistionStage("fadeOut");
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, [location]);
 
     function getCategoryRoutes(category) {
         return category.map(item => {
@@ -48,7 +61,21 @@ function MtRoutes ({db, category, searchResult}) {
     }
 
     return ( 
-        <Routes>
+
+        <div
+            className={`${transitionStage}`}
+            onAnimationEnd={() => {
+                if (transitionStage === "fadeOut") {
+                  setTransistionStage("fadeIn");
+                  setDisplayLocation(location);
+                }
+            }}
+        >
+
+        
+
+            <Routes  location={displayLocation}>
+
                 <Route 
                 path="/" 
                 element={            
@@ -57,6 +84,7 @@ function MtRoutes ({db, category, searchResult}) {
                     db={db}
                     />}
                 />
+                
                 {getCategoryRoutes(category)}
                 {getToolsRoutes(db)}
                 <Route 
@@ -96,6 +124,7 @@ function MtRoutes ({db, category, searchResult}) {
                 />
                 
             </Routes>
+        </div>
      );
 }
 

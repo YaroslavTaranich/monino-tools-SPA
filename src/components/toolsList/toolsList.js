@@ -1,4 +1,4 @@
-import IconBenefits from "../toolPage/iconBenefits";
+import IconBenefits from "../iconBenefits/iconBenefits";
 import Breadcrumps from "../UI/breadcrumps/breadcrumps";
 import ToolsItem from "./toolsItem";
 

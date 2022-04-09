@@ -1,6 +1,7 @@
 import './orderForm.css';
 import { useEffect, useState } from 'react';
 import InputWithLabel from '../UI/inputWithLabel/inputWithLabel'
+import ButtonMT from '../UI/buttons/button';
 
 
 function OrderForm ({tool}) {
@@ -31,7 +32,7 @@ function OrderForm ({tool}) {
         const name = e.target.name;
   
         if (name === "days") {
-          if(+e.target.value < 1) {
+          if(+e.target.value < 0) {
             setFormData({...formData, [name] : 1});
   
           } else {
@@ -217,8 +218,7 @@ function OrderForm ({tool}) {
           </div>
         </div>
 
-
-        <button className='btn btn-primary form--submit' type="submit">Взять в арнеду</button>
+        <ButtonMT btnClass="primary" className='form--submit' type="submit" onClick={() => alert("click")}>Взять в арнеду</ButtonMT>
       </form>
      );
 }

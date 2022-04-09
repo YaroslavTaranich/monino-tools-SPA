@@ -1,14 +1,11 @@
 import './buttons.css';
 
-const ButtonMT = (props) => {
+const ButtonMT = ({btnClass, className, ...props}) => {
 
-    return(
-        
-            <button className={"btn " +  props.btnClass}>
+    return(    
+            <button className={" btn btn-" +  btnClass + " " + className} {...props}>
                 {props.children}
             </button>
-       
-
     )
 }
 

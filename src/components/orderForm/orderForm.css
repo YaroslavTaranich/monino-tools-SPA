@@ -52,7 +52,9 @@ textarea
 {
     color: #58595B;
 }
-
+textarea.form-input {
+    height: 12rem;
+}
 .form-group--radio{
     display: flex;
     justify-content: space-around;
@@ -74,7 +76,7 @@ textarea
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    outline: 2px solid #ecb600;
+    border: 2px solid #ecb600;
     transform: translate(-3.5rem, -.1rem);
     
     
@@ -194,5 +196,25 @@ textarea
     }
     .order-modal__tool-card{
         display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .form-group--date{
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 5rem;
+    }
+    
+    .form-label--date{
+        position: absolute;
+        left: 0;
+        top: -4rem;
+    }
+    
+    
+    .form-input--date{
+        width: 100%;
+        font-size: 2rem;
     }
 }

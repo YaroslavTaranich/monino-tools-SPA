@@ -18,7 +18,7 @@ const Breadcrumps = ({ category}) => {
 
     return (
         <div className='breadcrumps-wrapper'>
-            <span className='breadcrumps-item'> <Link className='breadcrumps-link' to='/'>Каталог инструмента </Link> </span> {categoryLink}  
+            <span className='breadcrumps-item'> <Link className='breadcrumps-link' to='/'>Каталог <span> инструмента</span></Link> </span> {categoryLink}  
         </div>
     )
 }

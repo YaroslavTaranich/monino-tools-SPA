@@ -1,9 +1,3 @@
-/* .btn-wrapper {
-    transform: skewX(-7deg) translateX(-2rem);
-    background-color: #ecb600;
-    border-radius: 3px;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-} */
 
 .btn {
     display: inline-block;
@@ -24,7 +18,8 @@
 
 .btn-primary:hover {
     padding: 1.5rem 8rem;
-    outline: 5px solid #f37021;
+    box-sizing: border-box;
+    border-collapse: collapse;
     transform: translateY(-2px);
     box-shadow: 0rem 1rem 3rem rgba(0, 0, 0, 0.405); 
 }
@@ -34,7 +29,10 @@
 }
 
 .btn-secondary {
-    background-color: transparent;
+    background-color:transparent;
+    background-image: linear-gradient(107deg, transparent 50%, #ecb600 50%);
+    background-size:220%;
+    background-position: 0%;
     color: #333;
     border: 1px solid #ecb600;
     outline: none;
@@ -42,11 +40,28 @@
     cursor: pointer;
     padding: .8rem 2rem;
     border-radius: 3px;     
-    transition: all .3s;       
+    transition: all .4s ease-in-out;       
 }
 .btn-secondary:hover {
-    background-color: #ecb600;
+    background-position:100%;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.168);
+    transform: translateY(-1px);
 }
 .btn-secondary:active {
     transform: translateY(1px);
+}
+
+.btn-menu {
+    padding: 0.6rem 2rem;
+    border-radius: 1.75rem;
+    border:none;
+    background-image: linear-gradient(107deg, white 50%, #ecb600 50%);
+    background-size:220%;
+    background-position: 0%;
+    transition: all .6s;
+}
+.btn-menu:hover {
+    background-position:100%;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.168);
+    transform: translateY(-1px);
 }

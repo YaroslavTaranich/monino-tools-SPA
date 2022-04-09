@@ -20,10 +20,22 @@
     transform: skew(40deg, 0);
     transition: all .33s;
 }
+.breadcrumps-link span{
+    transition: all .33s;
+    color: #58595B;
+}
 
-.breadcrumps-link:hover{
+.breadcrumps-link:hover, 
+.breadcrumps-link:hover
+ span{
     color: rgb(243, 112, 33);
 }
 .breadcrumps-item:hover {
     border-color:rgb(243, 112, 33) ;
+}
+
+@media (max-width:600px) {
+    .breadcrumps-link span{
+        display: none;
+    }
 }

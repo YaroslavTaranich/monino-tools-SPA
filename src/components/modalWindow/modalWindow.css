@@ -33,7 +33,7 @@
 }
 .close-icon:hover {
     color:#F37021;
-    outline: 2px solid #F37021;
+    border: 2px solid #F37021;
     transform: rotate(90deg);
 }
 
@@ -44,6 +44,8 @@
     background-color: #FDF7F0;
     border-radius: 3px;
     padding: 3rem;
+    max-height: 98vh;
+    overflow: auto;
 }
 .order-model__title {
     font-size: 2.5rem;

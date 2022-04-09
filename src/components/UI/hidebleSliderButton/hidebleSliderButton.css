@@ -92,7 +92,7 @@
     transition: all .2s;
 }
 .show-wrapper {
-    outline: .4rem solid #58595b59;
+    box-shadow: 0rem 1rem 2rem hsla(220, 2%, 35%, .5);
     width: 65rem;
     height: 3.5rem;
     transition: all .3s ease-in;

@@ -21,7 +21,7 @@ const SearchInput = ({searchQuery, setSearchQuery, db, setSearchResult, inputRef
             <div className="search-block">
                 <input
                     id='search-input'
-                    type="text"
+                    type="search"
                     placeholder="Поиск"
                     className="search-block-input"
                     value={searchQuery}

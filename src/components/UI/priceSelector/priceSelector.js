@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ModalWindow from '../../modalWindow/modalWindow';
 import OrderForm from '../../orderForm/orderForm';
 import ToolCardForm from '../../orderForm/toolCardForm';
+import ButtonMT from '../buttons/button';
 
 import './priceSelector.css';
 
@@ -35,13 +36,13 @@ const PriceSelector = ({tool}) => {
         }
 
         return(
-            <span 
+            <button 
             className={'price-selector__tarif-button ' + activeClass} 
             key={"tarif-button" + i}
             onClick={() => setChousenTarif(i)}
             >
                 {item}
-            </span>
+            </button>
         )
     })
 
@@ -64,10 +65,10 @@ const PriceSelector = ({tool}) => {
                     <span className='price-selector__span'>Залог: {rent.zalog[chousenTarif].trim(' ')} </span>
                     <span className="rub">&#8381;</span>
                 </div>
-                <button 
-                className="btn btn-primary"
+                <ButtonMT
+                btnClass='primary'
                 onClick={() => setShowModal(true)}
-                >Взять в арнеду</button>
+                >Взять в арнеду</ButtonMT>
             </div>
             {showModal}
             {console.log(showModal)}

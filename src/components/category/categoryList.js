@@ -1,6 +1,6 @@
 // import react from "react";
 import AnotherTools from '../anotherTools/anotherTools';
-import IconBenefits from '../toolPage/iconBenefits';
+import IconBenefits from '../iconBenefits/iconBenefits';
 import './category.css';
 import CategoryItem from "./categoryItem";
 

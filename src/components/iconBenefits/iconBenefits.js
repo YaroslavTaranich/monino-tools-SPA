@@ -2,6 +2,7 @@ import './iconBenefits.css'
 import { faTruck, faGears,  faWallet, faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ButtonMT from '../UI/buttons/button';
+import { Link } from 'react-router-dom';
 
 // faGear, faMoneyBillTransfer,
 
@@ -33,8 +34,8 @@ function IconBenefits () {
                 </div>
                 <h4 className='icon-benefits-item-title'>Доставка и возврат</h4>
             <p className='icon-benefits-item-description'>Вы можете заказать доставку до вас и обратно!</p>
-            <ButtonMT btnClass="btn-secondary">
-                О доставке
+            <ButtonMT btnClass="secondary">
+                <Link to="/delivery">О доставке</Link> 
             </ButtonMT>
             </div>
 

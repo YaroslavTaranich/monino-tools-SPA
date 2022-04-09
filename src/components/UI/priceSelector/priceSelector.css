@@ -44,21 +44,22 @@
     display: block;
     margin: 0rem;
     transition: all .2s;
-    /* border: 1px solid rgba(250, 235, 215, 1); */
+    border: 1px solid rgba(250, 235, 215, 1);
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
 }
 .price-selector__tarif-button:not(.price-selector__tarif-button:last-child){
     margin-right: 2.2rem;
 }
 .price-selector__tarif-button:hover {
-    transform: translateY(-2px) scale(1.1);
-    outline: 3px solid #f37021;
+    transform: translateY(-1px) scale(1.1);
+    border: 1px solid #f37021;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
 }
 .price-selector__tarif-button:active {
-    transform: translateY(2px);
+    transform: translateY(1px);
 }
 .tarif-button--active{
+    border: 1px solid #f37021;
     background-color: #ecb600;
     transition: all .4s;
 }
@@ -75,14 +76,18 @@
     font-size: 3.2rem;
 }   
 
+@media (max-width:850px){
+    .price-selector{
+        padding: 1rem;
+    }
+}
+
 @media (max-width:600px) {
 
     .price-selector-wrapper{
         width: 100%;
     }
-    .price-selector{
-        padding: 1rem;
-    }
+
     .price-selector__title{
         font-size: 3rem;
 
